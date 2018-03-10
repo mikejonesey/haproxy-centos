@@ -10,6 +10,11 @@
 #%define dev_rel dev25
 #%define release 1
 
+%if 0%{?rhel} == 7
+    # CentOS 7 forces ".el7.centos"
+    %define dist .el7
+%endif
+
 Name: haproxy
 Summary: HA-Proxy is a TCP/HTTP reverse proxy for high availability environments
 Version: %{version}
