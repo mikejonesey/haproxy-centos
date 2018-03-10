@@ -6,7 +6,7 @@
 %define haproxy_confdir %{_sysconfdir}/haproxy
 %define haproxy_datadir %{_datadir}/haproxy
 
-%define version 1.5.3
+%define version 1.8.4
 #%define dev_rel dev25
 #%define release 1
 
@@ -103,12 +103,12 @@ fi
 %files
 %defattr(-,root,root,-)
 %doc CHANGELOG LICENSE README doc/*
-%doc examples/url-switching.cfg
-%doc examples/acl-content-sw.cfg
-%doc examples/content-sw-sample.cfg
-%doc examples/cttproxy-src.cfg
-%doc examples/haproxy.cfg
-%doc examples/tarpit.cfg
+#%doc examples/url-switching.cfg
+#%doc examples/acl-content-sw.cfg
+#%doc examples/content-sw-sample.cfg
+#%doc examples/cttproxy-src.cfg
+#%doc examples/haproxy.cfg
+#%doc examples/tarpit.cfg
 %{haproxy_datadir}
 %dir %{haproxy_confdir}
 %config(noreplace) %{haproxy_confdir}/%{name}.cfg
